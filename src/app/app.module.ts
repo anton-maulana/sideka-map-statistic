@@ -17,6 +17,7 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './components/home';
 import { MapsComponent } from './components/maps';
 import { NoContentComponent } from './components/no-content';
+import {  AgmCoreModule } from 'angular2-google-maps/core';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -30,7 +31,7 @@ type StoreType = {
   disposeOldHosts: () => void
 };
 
-/**
+/**BrowserModule, AgmCoreModule.forRoot()
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
@@ -43,6 +44,7 @@ type StoreType = {
   ],
   imports: [ // import Angular's modules
     BrowserModule,
+    AgmCoreModule.forRoot(),
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
