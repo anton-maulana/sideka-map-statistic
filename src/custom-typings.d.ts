@@ -24,6 +24,7 @@ declare module 'jwt-decode' {
   export = jwtDecode;
 }
 
+
  *
  * If you're prototying and you will fix the types later you can also declare it as type any
  *
@@ -44,6 +45,7 @@ import * as _ from 'lodash'
  */
 
 // support NodeJS modules without type definitions
+
 declare module '*';
 
 /*
